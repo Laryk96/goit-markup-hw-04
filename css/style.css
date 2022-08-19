@@ -257,17 +257,17 @@ img {
   background-color: #188ce8;
 }
 
-/* Section original */
+/* Section features */
 
-.flex-original {
+.flex-features {
   display: flex;
   justify-content: space-between;
 }
 
-.flex-original .list {
+.flex-features .list {
   width: 270px;
 }
-.flex-original .list:not(:last-child) {
+.flex-features .list:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -280,7 +280,7 @@ img {
 
 /* Особенности иконки через before */
 
-/* .flex-original .list::before {
+/* .flex-features .list::before {
 display: block;
 height: 120px;
 margin-bottom: 30px;
