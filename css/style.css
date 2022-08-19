@@ -174,26 +174,6 @@ img {
   fill: currentColor;
 }
 
-/* Хедер икноки через before */
-
-/* .contact-header-link::before {
-  content: "";
-  margin-right: 10px;
-  background-position: center;
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.email::before {
-  width: 15.2px;
-  height: 12px;
-  background-image: url(../images/svg-icons/envelope.svg);
-}
-.tel::before {
-  width: 10px;
-  height: 16px;
-  background-image: url(../images/svg-icons/smartphone.svg);
-} */
 
 /* Main */
 
@@ -257,17 +237,16 @@ img {
   background-color: #188ce8;
 }
 
-/* Section features */
+/* Section original */
 
 .flex-features {
   display: flex;
-  justify-content: space-between;
 }
 
-.flex-features .list {
+.item-features {
   width: 270px;
 }
-.flex-features .list:not(:last-child) {
+.item-features:not(:last-child) {
   margin-right: 30px;
 }
 
@@ -277,33 +256,6 @@ img {
   background: #f5f4fa;
   border-radius: 4px;
 }
-
-/* Особенности иконки через before */
-
-/* .flex-features .list::before {
-display: block;
-height: 120px;
-margin-bottom: 30px;
-content: "";
-background-position: center;
-background-repeat: no-repeat;
-background-size: contain;
-background-color: #F5F4FA;
-border-radius: 4px;
-}
-
-.icon-antenna::before{
-  background-image: url(../images/svg-icons/antenna.svg);
-}
-.icon-clock::before{
-  background-image: url(../images/svg-icons/clock.svg);
-}
-.icon-diagram::before{
-  background-image: url(../images/svg-icons/diagram.svg);
-}
-.icon-astronaut::before{
-  background-image: url(../images/svg-icons/astronaut.svg);
-} */
 
 .subtitle {
   margin-bottom: 10px;
