@@ -3,15 +3,19 @@
   /* Text Color */
   --main-color-text: #757575;
   --titel-color-text: #212121;
-  --white-color-text: #ffffff;
-  --logo-black--text: #000000;
+  --white-color: #ffffff;
+  --logo-black-text: #000000;
   --logo-blue-text: #2196f3;
 
-  /* BGD Colors */
+  /* interactive Colors */
   --bgd-accent-color: #2f303a;
-  --bgd-button: #2196f3;
+  --activ-color-blue: #2196f3;
   --bgd-button-filter: #f5f4fa;
+
+  /* border */
+  --border-card-portfolio:  #eeeeee;
 }
+
 
 /* Стандартные стили */
 
@@ -72,20 +76,16 @@ img {
 .nav-page.list :focus,
 .contact-header.list :hover,
 .contact-header.list :focus,
-.contact-footer-list :hover,
-.contact-footer-list :focus {
+.contact-footer.list :hover,
+.contact-footer.list :focus {
   color: var(--logo-blue-text);
 }
 
 /* header */
 .header {
   height: 80px;
-  color: var(--white-color-text);
+  color: var(--white-color);
   border-bottom: 1px solid #ececec;
-}
-
-.header .container {
-  /* align-items: center; */
 }
 
 .flex-nav {
@@ -98,7 +98,7 @@ img {
 .logo {
   font-family: "Raleway", sans-serif;
 
-  color: var(--logo-black--text);
+  color: var(--logo-black-text);
   letter-spacing: 0.03em;
   font-weight: 700;
   font-size: 26px;
@@ -108,7 +108,7 @@ img {
 }
 
 .logo.white {
-  color: var(--white-color-text);
+  color: var(--white-color);
   margin-bottom: 20px;
 }
 
@@ -127,7 +127,6 @@ img {
   margin-left: 93px;
   align-items: center;
 }
-
 
 .nav-item:not(:first-child) {
   margin-left: 50px;
@@ -152,6 +151,7 @@ img {
 .contact-header.list {
   display: flex;
   margin-left: auto;
+  align-items: center;
 }
 
 .contact-item:not(:first-child) {
@@ -159,42 +159,85 @@ img {
 }
 
 .contact-header-link {
-  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
 
   color: var(--main-color-text);
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
-  display: block;
+
+  text-decoration: none;
 }
+
+.icon-contact{
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+
+
+/* Хедер икноки через before */
+
+/* .contact-header-link::before {
+  content: "";
+  margin-right: 10px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.email::before {
+  width: 15.2px;
+  height: 12px;
+  background-image: url(../images/svg-icons/envelope.svg);
+}
+.tel::before {
+  width: 10px;
+  height: 16px;
+  background-image: url(../images/svg-icons/smartphone.svg);
+} */
+
+
+
 
 /* Main */
 
-.hero-bgd {
-  padding: 200px 0;
-
-  background-color: var(--bgd-accent-color);
-}
-
-.hero-bgd >.container {
-  display: flex;
-  flex-direction: column;
-  align-items: center; 
+.hero-section {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 200px;
+  padding-bottom: 200px;
   text-align: center;
-}
 
+  background-image: linear-gradient(
+      to right,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../images/hero/hero.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* Подстраховка bgd */
+  background-color: var(--activ-color-blue);
+}
 
 .hero-title {
   margin-bottom: 30px;
-  width: 696px;
-  color: var(--white-color-text);
+  max-width: 696px;
+  margin-left: auto;
+  margin-right: auto;
+
+  color: var(--white-color);
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
 }
-
 
 /* Batton */
 
@@ -204,8 +247,8 @@ img {
   padding: 10px 32px;
   border: none;
 
-  color: var(--white-color-text);
-  background-color: var(--bgd-button);
+  color: var(--white-color);
+  background-color: var(--activ-color-blue);
   font-family: "Roboto";
   font-weight: 700;
   font-size: 16px;
@@ -220,19 +263,53 @@ img {
   background-color: #188ce8;
 }
 
-/* Section peculiarity */
+/* Section original */
 
-.flex-peculiarity {
+.flex-original {
   display: flex;
   justify-content: space-between;
 }
 
-.flex-peculiarity .list {
+.flex-original .list {
   width: 270px;
 }
-.flex-peculiarity .list:not(:last-child) {
+.flex-original .list:not(:last-child) {
   margin-right: 30px;
 }
+
+.icon-container{
+  margin-bottom: 30px;
+
+  background: #F5F4FA;
+  border-radius: 4px;
+}
+
+/* Особенности иконки через before */
+
+/* .flex-original .list::before {
+display: block;
+height: 120px;
+margin-bottom: 30px;
+content: "";
+background-position: center;
+background-repeat: no-repeat;
+background-size: contain;
+background-color: #F5F4FA;
+border-radius: 4px;
+}
+
+.icon-antenna::before{
+  background-image: url(../images/svg-icons/antenna.svg);
+}
+.icon-clock::before{
+  background-image: url(../images/svg-icons/clock.svg);
+}
+.icon-diagram::before{
+  background-image: url(../images/svg-icons/diagram.svg);
+}
+.icon-astronaut::before{
+  background-image: url(../images/svg-icons/astronaut.svg);
+} */
 
 .subtitle {
   margin-bottom: 10px;
@@ -262,7 +339,8 @@ img {
 }
 
 .title-work,
-.title-team {
+.title-team,
+.title-client {
   color: var(--titel-color-text);
   font-weight: 700;
   font-size: 36px;
@@ -288,8 +366,9 @@ img {
 .team-card {
   width: 270px;
   border-radius: 0px 0px 4px 4px;
+  padding-bottom: 30px;
 
-  background: #ffffff;
+  background: var(--white-color);
 
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -297,7 +376,7 @@ img {
 
 .team-cont {
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 16px;
 }
 
 .name {
@@ -313,6 +392,78 @@ img {
   line-height: 1.19;
   letter-spacing: 0.03em;
   margin-top: 10px;
+}
+
+.icon-network-item{
+  display: inline-flex;
+}
+
+
+
+.network{
+  display: flex;
+  justify-content: center;
+
+  gap: 10px;
+}
+
+/* Аналог gap */
+/* .icon-network-item+.icon-network-item{
+  margin-left: 10px ;
+} */
+
+.icon-network-link{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: var();
+  color: var(--main-color-text);
+}
+
+.icon-network-link:hover,
+.icon-network-link:focus{
+  background-color: var(--logo-blue-text);
+  color:var(--white-color);
+}
+
+.icon-network{
+  height: 20px;
+  width: 20px;
+  fill: currentColor;
+}
+
+/* claint  */
+
+.clients {
+  display: flex;
+}
+.icon-client-item {
+  width: 170px;
+  height: 92px;
+}
+.icon-client-item+.icon-client-item{
+  margin-left:30px ;
+}
+.icon-client-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+	height: 100%;
+  border: 1px solid #AFB1B8;
+  border-radius: 4px;
+  color: #AFB1B8;
+}
+
+.icon-client-link:hover {
+  color: var(--activ-color-blue);
+  border-color: var(--activ-color-blue);
+}
+.icon-client {
+  fill: currentColor;
 }
 
 /* Footer */
@@ -342,7 +493,7 @@ img {
 
 .footer > .logo,
 .map-link {
-  color: var(--white-color-text);
+  color: var(--white-color);
 }
 
 .footer-email-item,
@@ -372,7 +523,7 @@ img {
   border: none;
 
   color: var(--titel-color-text);
-  background: var(--bgd-button-filter);
+  background-color: var(--bgd-button-filter);
   border-radius: 4px;
   font-weight: 500;
   font-size: 16px;
@@ -384,8 +535,8 @@ img {
 
 .filter-button:hover,
 .filter-button:focus {
-  color: var(--white-color-text);
-  background-color: var(--bgd-button);
+  color: var(--white-color);
+  background-color: var(--activ-color-blue);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
@@ -398,17 +549,17 @@ img {
 }
 
 .project-card {
-  width: calc((100% - 15*2) / 3);
+  width: calc((100% - 15 * 2) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 
-  background: #ffffff;
+  background: var(--white-color);
 }
 /* Сетка */
 .project-card:nth-child(3n) {
   margin-right: 0px;
 }
-.project-card:nth-last-child(-n+3) {
+.project-card:nth-last-child(-n + 3) {
   margin-bottom: 0px;
 }
 
@@ -417,10 +568,10 @@ img {
 }
 
 .desc-cont {
- padding: 20px 24px;
- border-left: 1px solid #EEEEEE;
- border-bottom: 1px solid #EEEEEE;
- border-right: 1px solid #EEEEEE;
+  padding: 20px 24px;
+  border-left: 1px solid var(--border-card-portfolio);
+  border-bottom: 1px solid  var(--border-card-portfolio);
+  border-right: 1px solid  var(--border-card-portfolio);
 }
 .project-title {
   color: var(--titel-color-text);
