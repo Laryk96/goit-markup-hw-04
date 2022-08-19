@@ -430,8 +430,6 @@ border-radius: 4px;
 }
 
 .icon-network{
-  height: 20px;
-  width: 20px;
   fill: currentColor;
 }
 
@@ -478,6 +476,14 @@ border-radius: 4px;
   line-height: 1.7;
 }
 
+.address-box{
+  width: 231px;
+}
+
+.flex-footer{
+  display: flex;
+}
+
 .address {
   font-style: normal;
   margin-top: 20px;
@@ -499,6 +505,51 @@ border-radius: 4px;
 .footer-email-item,
 .footer-tel-item {
   margin-top: 9px;
+}
+
+.title-social{
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.42;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: var(--white-color);
+}
+.social-box{
+  width: 208px;
+  margin-left: 70px;
+  margin-top: 12px;
+}
+
+.social {
+  display: flex;
+}
+.social-item {
+
+}
+.social-item+.social-item{
+  margin-left:10px ;
+}
+.social-link {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+
+  color: var(--white-color);
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.social-link:hover {
+  color: var(--white-color);
+  background-color: var(--activ-color-blue);
+}
+.icon-social {
+  fill: currentColor;
 }
 
 /* 2 Main Portfolio */
