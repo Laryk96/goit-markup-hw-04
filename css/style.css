@@ -243,15 +243,13 @@ img {
   display: flex;
 }
 
-.item-features {
-  width: 270px;
-}
 
 .item-features:not(:last-child) {
   margin-right: 30px;
 }
 
 .icon-container {
+  display: block;
   margin-bottom: 30px;
 
   background: #f5f4fa;
@@ -341,9 +339,7 @@ img {
   margin-top: 10px;
 }
 
-.icon-network-item {
-  display: inline-flex;
-}
+
 
 .network {
   display: flex;
@@ -357,14 +353,19 @@ img {
   margin-left: 10px ;
 } */
 
+
+.icon-network-item {
+  display: inline-flex;
+}
+
 .icon-network-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background-color: var();
+  background-color: var(--white-color);
   color: var(--main-color-text);
 }
 
@@ -391,7 +392,7 @@ img {
   margin-left: 30px;
 }
 .icon-client-link {
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 100%;
