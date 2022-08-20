@@ -11,6 +11,9 @@
   --bgd-accent-color: #2f303a;
   --activ-color-blue: #2196f3;
   --bgd-button-filter: #f5f4fa;
+  
+  /* icon color */
+  --icon-main-color: #AFB1B8;
 
   /* border */
   --border-card-portfolio: #eeeeee;
@@ -179,7 +182,6 @@ img {
 
 .hero-section {
   max-width: 1600px;
-  height: 600px;
   margin-left: auto;
   margin-right: auto;
   padding-top: 200px;
@@ -249,8 +251,11 @@ img {
 }
 
 .icon-container {
-  display: block;
+  display:flex;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 30px;
+  height: 120px;
 
   background: #f5f4fa;
   border-radius: 4px;
@@ -311,7 +316,6 @@ img {
 .team-card {
   width: 270px;
   border-radius: 0px 0px 4px 4px;
-  padding-bottom: 30px;
 
   background: var(--white-color);
 
@@ -321,7 +325,7 @@ img {
 
 .team-cont {
   padding-top: 30px;
-  padding-bottom: 16px;
+  padding-bottom: 30px;
 }
 
 .name {
@@ -330,13 +334,14 @@ img {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
+  margin-bottom: 10px;
 }
 
 .prof {
   font-size: 16px;
   line-height: 1.19;
   letter-spacing: 0.03em;
-  margin-top: 10px;
+  margin-bottom: 16px;
 }
 
 
@@ -366,7 +371,7 @@ img {
   height: 44px;
   border-radius: 50%;
   background-color: var(--white-color);
-  color: var(--main-color-text);
+  color: var(--icon-main-color);
 }
 
 .icon-network-link:hover,
@@ -399,10 +404,11 @@ img {
   height: 100%;
   border: 1px solid #afb1b8;
   border-radius: 4px;
-  color: #afb1b8;
+  color: var(--icon-main-color);
 }
 
-.icon-client-link:hover {
+.icon-client-link:hover,
+.icon-client-link:focus {
   color: var(--activ-color-blue);
   border-color: var(--activ-color-blue);
 }
@@ -428,6 +434,7 @@ img {
 
 .flex-footer {
   display: flex;
+  align-items: baseline;
 }
 
 .address {
@@ -464,9 +471,8 @@ img {
   color: var(--white-color);
 }
 .social-box {
-  width: 208px;
+  align-items: baseline;
   margin-left: 70px;
-  margin-top: 12px;
 }
 
 .social {
@@ -489,7 +495,8 @@ img {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-.social-link:hover {
+.social-link:hover,
+.social-link:focus {
   color: var(--white-color);
   background-color: var(--activ-color-blue);
 }
@@ -515,6 +522,7 @@ img {
 }
 
 .filter-button {
+  padding: 6px 22px ;
   font-family: "Roboto";
   border: none;
 
@@ -552,8 +560,8 @@ img {
   background: var(--white-color);
 }
 
-.project-card:hover,
-.project-card:focus {
+.project-link:hover,
+.project-link:focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -566,6 +574,7 @@ img {
 }
 
 .project-link {
+  display: block;
   text-decoration: none;
 }
 
