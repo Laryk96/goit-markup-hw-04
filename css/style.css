@@ -85,15 +85,11 @@ img {
 
 /* header */
 .header {
-  height: 80px;
   color: var(--white-color);
   border-bottom: 1px solid #ececec;
-}
+  padding: 15px 0;
 
-.flex-nav {
-  display: flex;
-  height: 80px;
-  align-items: center;
+  outline: 2px solid khaki;
 }
 
 /* logotype */
@@ -114,12 +110,16 @@ img {
   margin-bottom: 20px;
 }
 
-/* logo - span */
 .web {
   color: var(--logo-blue-text);
 }
 
 /*  Navigation */
+.flex-nav {
+  display: flex;
+  align-content: center;
+}
+
 .nav {
   display: flex;
 }
@@ -560,11 +560,7 @@ img {
   background: var(--white-color);
 }
 
-.project-link:hover,
-.project-link:focus {
-  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
-    1px 4px 6px rgba(0, 0, 0, 0.16);
-}
+
 /* Сетка */
 .project-card:nth-child(3n) {
   margin-right: 0px;
@@ -576,6 +572,12 @@ img {
 .project-link {
   display: block;
   text-decoration: none;
+}
+
+.project-link:hover,
+.project-link:focus {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
 .desc-cont {
