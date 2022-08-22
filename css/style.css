@@ -1,5 +1,9 @@
 /* Global settings */
 :root {
+  /* Шрифты */
+  --font-logo-raleway:"Raleway", sans-serif;
+  --font-main: "Roboto", sans-serif;
+
   /* Text Color */
   --main-color-text: #757575;
   --titel-color-text: #212121;
@@ -23,7 +27,7 @@
 
 body {
   color: var(--main-color-text);
-  font-family: "Roboto", sans-serif;
+  font-family: var(--font-main);
 }
 
 h1,
@@ -74,12 +78,12 @@ img {
 }
 /* hover focus tab */
 
-.nav-page.list :hover,
-.nav-page.list :focus,
-.contact-header.list :hover,
-.contact-header.list :focus,
-.contact-footer.list :hover,
-.contact-footer.list :focus {
+.nav-link:hover,
+.nav-link:focus,
+.contact-header-link:hover,
+.contact-header-link:focus,
+.contact-footer-link:hover,
+.contact-footer-link:focus {
   color: var(--logo-blue-text);
 }
 
@@ -88,13 +92,11 @@ img {
   color: var(--white-color);
   border-bottom: 1px solid #ececec;
   padding: 15px 0;
-
-  outline: 2px solid khaki;
 }
 
 /* logotype */
 .logo {
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-logo-raleway);
 
   color: var(--logo-black-text);
   letter-spacing: 0.03em;
@@ -124,7 +126,7 @@ img {
   display: flex;
 }
 
-.nav-page.list {
+.nav-page {
   display: flex;
   margin-left: 93px;
   align-items: center;
@@ -150,7 +152,7 @@ img {
 }
 
 /* TOP Contacts */
-.contact-header.list {
+.contact-header {
   display: flex;
   margin-left: auto;
   align-items: center;
@@ -225,7 +227,7 @@ img {
 
   color: var(--white-color);
   background-color: var(--activ-color-blue);
-  font-family: "Roboto";
+  font-family: var(--font-main);
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -344,8 +346,6 @@ img {
   margin-bottom: 16px;
 }
 
-
-
 .network {
   display: flex;
   justify-content: center;
@@ -357,7 +357,6 @@ img {
 /* .icon-network-item+.icon-network-item{
   margin-left: 10px ;
 } */
-
 
 .icon-network-item {
   display: inline-flex;
@@ -450,7 +449,6 @@ img {
   text-decoration: none;
 }
 
-.footer > .logo,
 .map-link {
   color: var(--white-color);
 }
@@ -523,7 +521,7 @@ img {
 
 .filter-button {
   padding: 6px 22px ;
-  font-family: "Roboto";
+  font-family: var(--font-main);
   border: none;
 
   color: var(--titel-color-text);
@@ -547,7 +545,7 @@ img {
 }
 /* Project page */
 
-.projects.list {
+.projects {
   display: flex;
   flex-wrap: wrap;
 }
