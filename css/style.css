@@ -247,6 +247,9 @@ img {
   display: flex;
 }
 
+.item-features{
+  width: 270px;
+}
 
 .item-features:not(:last-child) {
   margin-right: 30px;
